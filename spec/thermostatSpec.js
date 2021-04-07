@@ -14,9 +14,19 @@ describe('thermostat', function() {
 
   describe('down', function() {
     it ('decreases the temperature by 1', function() {
-      thermostat.down()
-      thermostat.down()
+      thermostat.down();
+      thermostat.down();
       expect(thermostat.temperature).toEqual(19)
-    })
-  })
+    });
+
+    it('does not decrease below 10 degrees', function() {
+      for(let i = 0; i < 12; i++) {
+        thermostat.down();
+      }
+      expect(thermostat.temperature).toEqual(10)
+    });
+  });
 });
+
+
+
