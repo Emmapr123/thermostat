@@ -58,6 +58,13 @@ describe('thermostat', function() {
       expect(thermostat.temperature).toEqual(32)
     });
   });
+  describe('reset', function() {
+    it('can reset the temperature to 20', function() {
+      thermostat.reset()
+
+      expect(thermostat.temperature).toEqual(20)
+    })
+  })
 });
 
 
