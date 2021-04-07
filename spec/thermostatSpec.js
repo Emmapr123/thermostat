@@ -75,10 +75,15 @@ describe('thermostat', function() {
       expect(thermostat.energyUsage()).toEqual("low-usage")
     });
     it('returns medium usage if the temperature is below 25 and above 18', function() {
-      thermostat.up();
-      thermostat.up();
+      thermostat.reset();
       expect(thermostat.energyUsage()).toEqual("medium-usage")
-    })
+    });
+    it('returns high-usage if the temperature is above 25', function() {
+      for(let i = 0; i < 10; i++) {
+        thermostat.up();
+      }
+      expect(thermostat.energyUsage()).toEqual("high-usage")
+    });
   });
 });
 
