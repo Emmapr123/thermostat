@@ -47,8 +47,17 @@ describe('thermostat', function() {
       thermostat.powerSavingModeSwitch()
 
       expect(thermostat.powerSavingMode).toBe(false)
-    })
-  })
+    });
+  });
+
+  describe('up', function() {
+    it('increases up to 32 degrees if powerSavingMode is off', function() {
+      for(let i = 0; i < 10; i++) {
+        thermostat.up();
+      }
+      expect(thermostat.temperature).toEqual(32)
+    });
+  });
 });
 
 
