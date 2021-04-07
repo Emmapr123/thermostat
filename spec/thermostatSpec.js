@@ -26,6 +26,29 @@ describe('thermostat', function() {
       expect(thermostat.temperature).toEqual(10)
     });
   });
+
+  describe('powerSavingMode', function() {
+    it ('is true by default', function() {
+      expect(thermostat.powerSavingMode).toEqual(true)
+    })
+  })
+
+  describe('up', function() {
+    it('does not increase above 25 degrees if powerSavingMode is on', function() {
+      for(let i = 0; i < 20; i++) {
+        thermostat.up();
+      }
+      expect(thermostat.temperature).toEqual(25)
+    });
+  });
+
+  describe ('powerSavingModeSwitch', function() {
+    it ('can switch to being false', function () {
+      thermostat.powerSavingModeSwitch()
+
+      expect(thermostat.powerSavingMode).toBe(false)
+    })
+  })
 });
 
 
