@@ -14,9 +14,18 @@ class Thermostat {
 
   powerSavingModeSwitch() {
     this.powerSavingMode = !this.powerSavingMode
-  }
+  };
 
   reset() {
     this.temperature = 20;
+  };
+
+  energyUsage() {
+    if(this.temperature < 18) {
+      return "low-usage";
+    }
+
+    return "medium-usage";
+    
   }
 }

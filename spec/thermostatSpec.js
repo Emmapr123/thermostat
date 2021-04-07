@@ -30,8 +30,8 @@ describe('thermostat', function() {
   describe('powerSavingMode', function() {
     it ('is true by default', function() {
       expect(thermostat.powerSavingMode).toEqual(true)
-    })
-  })
+    });
+  });
 
   describe('up', function() {
     it('does not increase above 25 degrees if powerSavingMode is on', function() {
@@ -58,13 +58,28 @@ describe('thermostat', function() {
       expect(thermostat.temperature).toEqual(32)
     });
   });
+  
   describe('reset', function() {
     it('can reset the temperature to 20', function() {
       thermostat.reset()
 
       expect(thermostat.temperature).toEqual(20)
+    });
+  });
+
+  describe('energyUsage', function() {
+    it('returns low-usage if temperature is below 18', function() {
+      thermostat.down();
+      thermostat.down();
+      thermostat.down();
+      expect(thermostat.energyUsage()).toEqual("low-usage")
+    });
+    it('returns medium usage if the temperature is below 25 and above 18', function() {
+      thermostat.up();
+      thermostat.up();
+      expect(thermostat.energyUsage()).toEqual("medium-usage")
     })
-  })
+  });
 });
 
 
