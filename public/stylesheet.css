@@ -3,12 +3,17 @@ body {
 }
 
 .low-usage {
-  color: green;
+  color: blue;
+}
+
+.medium-usage {
+  color: black;
 }
 
 .high-usage {
   color: red;
 }
+
 
 .outer-square {
    margin: 2%;
@@ -27,12 +32,17 @@ body {
   width: 30vw;
 }
 
+#temperature {
+  font-size: 300px;
+}
+
 .reset {
   background-color: white;
   padding: 8px 16px 8px 16px;
   color: black;
   margin: 8px;
   border: none;
+  font-size: 50px;
 }
 
 .control {
@@ -41,6 +51,7 @@ body {
   color: black;
   margin: 8px;
   border: none;
+  font-size: 50px;
 }
 
 .top-right {
@@ -74,6 +85,7 @@ body {
   padding: 8px 16px 8px 16px;
   color: black;
   border: none;
+  font-size: 50px;
 }
 
 .bottom-middle-bottom {
