@@ -22,10 +22,6 @@ body {
   color: red;
 }
 
-.outer-square {
-   margin: 2%;
-}
-
 .top-half {
   display: flex;
   flex-direction: row;
@@ -78,10 +74,6 @@ body {
   width: 30vw;
 }
 
-.bottom-middle {
-  border-right: 8px solid black;
-}
-
 .bottom-middle-top {
   border-bottom: 8px solid black;
   height: 300px;
@@ -97,11 +89,13 @@ body {
 
 .bottom-middle-bottom {
   height: 5%;
+  width: 100%;
 }
 
 .bottom-right {
   display: flex;
   flex-direction: column;
+  border-left: 8px solid black
 }
 
 .bottom-right-top {
