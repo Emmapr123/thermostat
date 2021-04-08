@@ -2,23 +2,26 @@
 <html>
   <head>
     <link rel='stylesheet' type='text/css' href='./public/stylesheet.css'>
+    <script language="JavaScript"></script>
       <title>
         Thermostat
       </title>
       <body>
         <h1>Temperature:</h1>
         <h2 id="temperature"></h2>
-        <button class='up' id='up'>+</button>
+        <button id='up'>+</button>
         <button id='down'>-</button>
         <button id='reset'>reset</button>
         <br>
         <h2 id='powerSavingMode'>Power Saving mode:</h2>
-        <button id="powerSavingMode">On/Off</button>
+        <button id="powerSavingModeSwitch">On/Off</button>
         <br>
         <h2>Energy Usage:</h2>
         <h2 id="energUsage"></h2>
       </body>
     </link>
     <script src='src/thermostat.js'></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src='interface.js'></script>
   </head>
 </html>
