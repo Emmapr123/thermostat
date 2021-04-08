@@ -14,6 +14,13 @@ body {
   color: red;
 }
 
+.ON {
+  color: blue;
+}
+
+.OFF {
+  color: red;
+}
 
 .outer-square {
    margin: 2%;
@@ -33,7 +40,7 @@ body {
 }
 
 #temperature {
-  font-size: 300px;
+  font-size: 150px;
 }
 
 .reset {
