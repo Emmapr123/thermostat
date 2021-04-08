@@ -24,6 +24,8 @@ $('#down').click(function() {
 $('#reset').click(function() {
   thermostat = new Thermostat;
   $('#temperature').text(thermostat.temperature)
+  $('#energyUsage').text(thermostat.energyUsage());
+  $('#temperature').attr('class', thermostat.energyUsage());
 });
 
 $('#powerSavingModeSwitch').click(function() {

@@ -2,83 +2,13 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
-/* h1 {
-  font-family: 'Zilla Slab Highlight', cursive;
-} */
-
 .low-usage {
   color: green;
 }
 
 .high-usage {
   color: red;
-}/* 
-
-#tempTitle {
-  /* transform: rotate(90deg);
-  width: 100px;
-  /* height: 500px; */
-  /* padding: 50px;
-  margin: 20px;
-  background-color: tomato; */ 
-/* }
-
-button {
-  font-size: large;
-  border: none;
-  background-color: red;
-
 }
-
-.control {
-  background-color: coral;
-  padding: 8px 16px 8px 16px;
-  color: white;
-  margin: 8px;
-  border-radius: 8px;
-}
-
-
-
-
-
-
-
-.button {
- 
-  width: 19px;
-  height: 100px;
-  padding: 16px;
-  background-color: blue;
-
-}
-
-.powerSavingMode {
-  padding-top: 400px;
-}
-
-.thermostat {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid tomato
-}
-
-.thermostat-column {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-
-#temperature {
-  font-size: 40px;
-}
-
-.button-row {
-  display: flex;
-  flex-direction: row;
-  margin-top: auto;
-  margin-left: auto;
-}  */
 
 .outer-square {
    margin: 2%;
@@ -131,7 +61,6 @@ button {
 }
 
 .bottom-middle {
-  width: 30%;
   border-right: 8px solid black;
 }
 
@@ -144,10 +73,8 @@ button {
   background-color: white;
   padding: 8px 16px 8px 16px;
   color: black;
-  margin: 8px;
   border: none;
 }
-
 
 .bottom-middle-bottom {
   height: 5%;
@@ -159,6 +86,7 @@ button {
 }
 
 .bottom-right-top {
+  align-content: flex-end;
   background-color: blue;
   color: white;
   border-bottom: 8px solid black;
