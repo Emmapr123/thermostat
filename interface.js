@@ -4,20 +4,21 @@ $(document).ready(function() {
   $('#temperature').text(thermostat.temperature)
   $('#powerSavingMode').text(thermostat.powerSavingMode ? 'ON' : 'OFF')
   $('#energyUsage').text(thermostat.energyUsage());
+  $('#temperature').attr('class', thermostat.energyUsage());
 });
 
 $('#up').click(function() {
   thermostat.up()
   $('#temperature').text(thermostat.temperature)
   $('#energyUsage').text(thermostat.energyUsage());
-  $('#energyUsage').attr('class', thermostat.energyUsage());
+  $('#temperature').attr('class', thermostat.energyUsage());
 });
 
 $('#down').click(function() {
   thermostat.down()
   $('#temperature').text(thermostat.temperature)
   $('#energyUsage').text(thermostat.energyUsage());
-  $('#energyUsage').attr('class', thermostat.energyUsage());
+  $('#temperature').attr('class', thermostat.energyUsage());
 });
 
 $('#reset').click(function() {

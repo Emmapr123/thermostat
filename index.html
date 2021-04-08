@@ -5,15 +5,84 @@
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap" rel="stylesheet"> 
     <link rel='stylesheet' type='text/css' href='./public/stylesheet.css'>
     <script language="JavaScript"></script>
+      
       <title>
         Thermostat
       </title>
       <body>
-        <div class='button'>
+
+        <div class='outer-square'>
+        <div class='top-half'>
+          <div class='top-left'>
+            <h1 id='tempTitle'>Temperature:</h1>
+            <a id="temperature"></a>
+
+          </div>
+          <div class='top-right'>
+            <button class="control"  id='up'>+</button>
+            <button class="control" id='down'>-</button>
+            <button class='reset' id='reset'>reset</button>
+          </div>
+        </div>
+
+        <div class='bottom-half'>
+          <div class='bottom-left'>
+
+          </div>
+          <div class='bottom-middle'>
+            <div class='bottom-middle-top'>
+              <h2>Power Saving Mode:</h2>
+              <h2 id='powerSavingMode'>Power Saving mode:</h2>
+              <button id="powerSavingModeSwitch">On/Off</button>      
+            </div>
+            <div class='bottom-middle-bottom'>
+
+            </div>
+          </div>
+          <div class='bottom-right'>
+            <div class='bottom-right-top'>
+              <h2>Current location:</h2>
+              <label for="location">Choose your location:</label>
+                  <select name="location" id="location">
+                    <option value="London">London</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Moscow">Moscow</option>
+                    <option value="New York City">New York City</option>
+                    <option value="Melbourne">Melbourne</option>
+                    <option value="Amsterdam">Amsterdam</option>
+                  </select> 
+              <h2>Local Temperature:</h2>
+              <h2 id="outdoorTemperature"></h2>
+            </div>
+            <div class='bottom-right-bottom'>
+              <h2 id="energyUsage"></h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="thermostat">
+          <div class="thermostat-column">
+            <h1 id='tempTitle'>Temperature:</h1>
+            <a id="temperature"></a>
+          </div> -->
+          <!-- <div class="thermostat-column">
+            <div class="button-row">
+              
+                <button class="control"  id='up'>+</button>
+                <button class="control" id='down'>-</button>
+          
+             
+                <button class='reset' id='reset'>reset</button>
+           
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class='button'>
         <h1 id='tempTitle'>Temperature:</h1>
           <a id="temperature"></a>
-        </div>
-        <div class='button' class='up'>
+        </div> -->
+        <!-- <div class='button' class='up'>
         <button id='up'>+</button>
       </div>
       <div class='button'>
@@ -21,13 +90,13 @@
       </div>
       <div class='button'>
         <button id='reset'>reset</button>
-      </div>
-        <br>
+      </div> -->
+        <!-- <br>
         <div class='powerSavingMode'>
         <h2 id='powerSavingMode'>Power Saving mode:</h2>
         <button id="powerSavingModeSwitch">On/Off</button>
-        <br>
-      </div>
+        <br> -->
+      <!-- </div>
         <h2>Energy Usage:</h2>
         <h2 id="energyUsage"></h2>
         <h2>Outdoor Temperature:</h2>
@@ -41,6 +110,7 @@
               <option value="Amsterdam">Amsterdam</option>
             </select> 
         <h2 id="outdoorTemperature"></h2>
+      </div> -->
       </body>
     </link>
     <script src='src/thermostat.js'></script>
