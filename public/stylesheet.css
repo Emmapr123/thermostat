@@ -1,5 +1,9 @@
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
 h1 {
-  text-decoration: underline;
+  font-family: 'Zilla Slab Highlight', cursive;
 }
 
 .low-usage {
@@ -8,5 +12,37 @@ h1 {
 
 .high-usage {
   color: red;
+}
+
+#tempTitle {
+  -ms-transform: rotate(90deg);
+  width: 100px;
+  height: 500px;
+  padding: 50px;
+  margin: 20px;
+  background-color: tomato;
+}
+
+.up {
+  border: none;
+  background-color: black;
+}
+
+.button {
+  display: inline;
+  width: 19px;
+  height: 100px;
+  padding: 5px;
+}
+
+button {
+  font-size: large;
+  border: none;
+  background-color: white;
+
+}
+
+.powerSavingMode {
+  padding-top: 400px;
 }
 
