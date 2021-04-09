@@ -14,14 +14,6 @@ body {
   color: red;
 }
 
-.ON {
-  color: blue;
-}
-
-.OFF {
-  color: red;
-}
-
 .top-half {
   display: flex;
   flex-direction: row;

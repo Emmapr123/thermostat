@@ -29,4 +29,8 @@ class Thermostat {
       return "high-usage";
     }
   }
+
+  setTemperature(temp) {
+    this.temperature = temp
+  }
 }
