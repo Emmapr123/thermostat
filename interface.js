@@ -3,7 +3,6 @@ let thermostat = new Thermostat;
 $(document).ready(function() {
   $.get('http://localhost:4567/thermostat', function(data) {
     thermostat.setTemperature(parseInt(data));
-    console.log(thermostat.temperature, thermostat.energyUsage())
     $('#temperature').text(data + 'c');
     $('#powerSavingMode').text(thermostat.powerSavingMode ? 'ON' : 'OFF');
     $('#energyUsage').text(thermostat.energyUsage());

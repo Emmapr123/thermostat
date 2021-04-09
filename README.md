@@ -1,3 +1,13 @@
+## How to use
+
+open index.html (will not work yet)
+
+cd server - 
+bundle install
+rackup -p 4567
+
+the app should now work
+
 ### html skeleton
 
 header - state what it is
