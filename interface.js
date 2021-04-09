@@ -1,22 +1,26 @@
 let thermostat = new Thermostat;
 
 $(document).ready(function() {
-  $('#temperature').text(thermostat.temperature + 'c')
   $('#powerSavingMode').text(thermostat.powerSavingMode ? 'ON' : 'OFF')
   $('#energyUsage').text(thermostat.energyUsage());
   $('#temperature').attr('class', thermostat.energyUsage());
   $('#powerSavingModeSwitch').text(thermostat.powerSavingMode ? 'ON' : 'OFF')
+  $.get('http://localhost:4567/thermostat', function(data) {
+    $('#temperature').text(data + 'c')
+  })
 });
 
 $('#up').click(function() {
   thermostat.up()
-  $('#temperature').text(thermostat.temperature + 'c')
+  $.post('http://localhost:4567/thermostat', {temperature: thermostat.temperature});
+  $('#temperature').text(thermostat.temperature + 'c');
   $('#energyUsage').text(thermostat.energyUsage());
   $('#temperature').attr('class', thermostat.energyUsage());
 });
 
 $('#down').click(function() {
   thermostat.down()
+  $.post('http://localhost:4567/thermostat', {temperature: thermostat.temperature});
   $('#temperature').text(thermostat.temperature + 'c')
   $('#energyUsage').text(thermostat.energyUsage());
   $('#temperature').attr('class', thermostat.energyUsage());
@@ -24,6 +28,7 @@ $('#down').click(function() {
 
 $('#reset').click(function() {
   thermostat = new Thermostat;
+  $.post('http://localhost:4567/thermostat', {temperature: thermostat.temperature});
   $('#temperature').text(thermostat.temperature + 'c')
   $('#energyUsage').text(thermostat.energyUsage());
   $('#temperature').attr('class', thermostat.energyUsage());

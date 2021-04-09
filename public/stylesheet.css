@@ -95,7 +95,7 @@ body {
 .bottom-right {
   display: flex;
   flex-direction: column;
-  border-left: 8px solid black
+  border-left: 8px solid black;
 }
 
 .bottom-right-top {
