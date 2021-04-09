@@ -7,7 +7,13 @@ $(document).ready(function() {
   $('#powerSavingModeSwitch').text(thermostat.powerSavingMode ? 'ON' : 'OFF')
   $.get('http://localhost:4567/thermostat', function(data) {
     $('#temperature').text(data + 'c')
+  });
+  $.get('http://localhost:4567/city', function(data) {
+    $('#location').val(data)
   })
+  $.get('http://api.openweathermap.org/data/2.5/weather?q=' + $('#location').val() + '&appid=289b88a2e3e5fb781d9de6163f5e3c39&units=metric', function(data) {
+      $('#outdoorTemperature').text(data.main.temp + 'c');
+    });
 });
 
 $('#up').click(function() {
@@ -41,6 +47,7 @@ $('#powerSavingModeSwitch').click(function() {
 
 $('#location').change(function() {
   let city = $('#location').val();
+  $.post('http://localhost:4567/city', {city: city});
   $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=289b88a2e3e5fb781d9de6163f5e3c39&units=metric', function(data) {
     $('#outdoorTemperature').text(data.main.temp + 'c');
   });
